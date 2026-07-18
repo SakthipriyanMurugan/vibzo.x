@@ -37,22 +37,22 @@
                         <a href="#services">Mobile App Development</a>
                         <a href="#services">Custom Software Development</a>
                         <a href="#services">Web App Development</a>
-                        <a href="#services">Maintenance & Support</a>
+                        <a href="#services">Maintenance &amp; Support</a>
                     </div>
                 </div>
                 <a href="#courses" class="nav-item">Courses</a>
                 <a href="#projects" class="nav-item">Projects</a>
                 <a href="#why-choose" class="nav-item">About Us</a>
-                <a href="#" class="nav-item" onclick="openModal('contactModal')">Contact Us</a>
+                <a href="#" class="nav-item" onclick="event.preventDefault(); openModal('contactModal')">Contact Us</a>
             </nav>
             <div class="nav-actions">
                 <a href="tel:+916379474460" class="phone-link">
                     <i data-lucide="phone" class="phone-icon"></i>
                     <span>+91 63794 74460</span>
                 </a>
-                <button class="btn btn-primary" onclick="openModal('quoteModal')">Get a Free Quote</button>
+                <button type="button" class="btn btn-primary" onclick="openModal('quoteModal')">Get a Free Quote</button>
                 <!-- Hamburger menu for mobile -->
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <button type="button" class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
                     <i data-lucide="menu" id="menu-btn-icon"></i>
                 </button>
             </div>
@@ -66,11 +66,11 @@
         <a href="#courses" onclick="toggleMobileMenu()">Courses</a>
         <a href="#projects" onclick="toggleMobileMenu()">Projects</a>
         <a href="#why-choose" onclick="toggleMobileMenu()">About Us</a>
-        <a href="#" onclick="toggleMobileMenu(); openModal('contactModal')">Contact Us</a>
+        <a href="#" onclick="event.preventDefault(); toggleMobileMenu(); openModal('contactModal')">Contact Us</a>
         <a href="tel:+916379474460" class="mobile-phone-link">
             <i data-lucide="phone"></i> +91 63794 74460
         </a>
-        <button class="btn btn-primary w-full" onclick="toggleMobileMenu(); openModal('quoteModal')">Get a Free Quote</button>
+        <button type="button" class="btn btn-primary w-full" onclick="toggleMobileMenu(); openModal('quoteModal')">Get a Free Quote</button>
     </div>
 
     <!-- Hero Section -->
@@ -80,14 +80,14 @@
         <div class="container hero-container">
             <div class="hero-content">
                 <div class="hero-tag">
-                    <span class="tag-dot"></span> SOFTWARE SOLUTIONS & TRAINING
+                    <span class="tag-dot"></span> SOFTWARE SOLUTIONS &amp; TRAINING
                 </div>
                 <h1 class="hero-title">
                     We Build <span class="text-gradient-orange">Digital Solutions.</span><br>
                     We Teach <span class="text-gradient-yellow">the Future.</span>
                 </h1>
                 <p class="hero-description">
-                    Vibzo Technologies provides cutting-edge software solutions for businesses and practical industry-focused training for students & professionals.
+                    Vibzo Technologies provides cutting-edge software solutions for businesses and practical industry-focused training for students &amp; professionals.
                 </p>
                 <div class="hero-buttons">
                     <a href="#services" class="btn btn-primary btn-lg">Explore Services <i data-lucide="arrow-right" class="btn-arrow"></i></a>
@@ -128,7 +128,7 @@
                         </div>
                         <div class="card-body">
                             <h3 class="card-title">Mobile App Development</h3>
-                            <p class="card-text">Android & iOS apps that deliver smooth performance and great user experience.</p>
+                            <p class="card-text">Android &amp; iOS apps that deliver smooth performance and great user experience.</p>
                         </div>
                     </div>
 
@@ -155,12 +155,12 @@
                     </div>
 
                     <!-- Maintenance & Support -->
-                    <div class="card service-card card-pink" onclick="openQuoteWithService('Maintenance & Support')">
+                    <div class="card service-card card-pink" onclick="openQuoteWithService('Maintenance &amp; Support')">
                         <div class="card-icon-wrapper">
                             <i data-lucide="settings"></i>
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title">Maintenance & Support</h3>
+                            <h3 class="card-title">Maintenance &amp; Support</h3>
                             <p class="card-text">Ongoing support and maintenance to keep your digital products running perfectly.</p>
                         </div>
                     </div>
@@ -172,7 +172,7 @@
                         <i data-lucide="shield-check" class="benefit-icon"></i>
                         <div>
                             <h4>Quality Assurance</h4>
-                            <p>Bug-free & reliable solutions</p>
+                            <p>Bug-free &amp; reliable solutions</p>
                         </div>
                     </div>
                     <div class="sub-benefit-item">
@@ -202,7 +202,7 @@
             <!-- TRAINING & COURSES COMPONENT -->
             <div class="courses-column" id="courses">
                 <div class="section-header">
-                    <span class="section-tag text-blue">TRAINING & COURSES</span>
+                    <span class="section-tag text-blue">TRAINING &amp; COURSES</span>
                     <h2 class="section-title">We Teach. You Build.</h2>
                 </div>
                 
@@ -225,7 +225,7 @@
                         </div>
                         <div class="card-body">
                             <h3 class="card-title">Full Stack App Development</h3>
-                            <p class="card-text">Build complete Android & iOS apps with modern technologies.</p>
+                            <p class="card-text">Build complete Android &amp; iOS apps with modern technologies.</p>
                         </div>
                     </div>
 
@@ -236,7 +236,7 @@
                         </div>
                         <div class="card-body">
                             <h3 class="card-title">UI/UX Design</h3>
-                            <p class="card-text">Design beautiful & user-friendly interfaces and amazing user experiences.</p>
+                            <p class="card-text">Design beautiful &amp; user-friendly interfaces and amazing user experiences.</p>
                         </div>
                     </div>
 
@@ -252,13 +252,13 @@
                     </div>
 
                     <!-- Deep Learning & Gen AI -->
-                    <div class="card course-card card-orange" onclick="openCourseWithName('Deep Learning & Gen AI')">
+                    <div class="card course-card card-orange" onclick="openCourseWithName('Deep Learning &amp; Gen AI')">
                         <div class="card-icon-wrapper">
                             <i data-lucide="sparkles"></i>
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title">Deep Learning & Gen AI</h3>
-                            <p class="card-text">Explore Deep Learning and Generative AI models & applications.</p>
+                            <h3 class="card-title">Deep Learning &amp; Gen AI</h3>
+                            <p class="card-text">Explore Deep Learning and Generative AI models &amp; applications.</p>
                         </div>
                     </div>
                 </div>
@@ -268,7 +268,7 @@
                     <div class="sub-benefit-item">
                         <i data-lucide="monitor" class="benefit-icon"></i>
                         <div>
-                            <h4>Online & Offline</h4>
+                            <h4>Online &amp; Offline</h4>
                             <p>Classes flexible to your schedule</p>
                         </div>
                     </div>
@@ -290,7 +290,7 @@
                         <i data-lucide="users" class="benefit-icon"></i>
                         <div>
                             <h4>Better Understanding</h4>
-                            <p>& Individual support</p>
+                            <p>and Individual support</p>
                         </div>
                     </div>
                     <div class="sub-benefit-item">
@@ -314,7 +314,7 @@
                 <ul class="why-bullets">
                     <li>
                         <div class="bullet-check"><i data-lucide="check"></i></div>
-                        <span>Industry-focused curriculum & real-world projects</span>
+                        <span>Industry-focused curriculum &amp; real-world projects</span>
                     </li>
                     <li>
                         <div class="bullet-check"><i data-lucide="check"></i></div>
@@ -334,7 +334,7 @@
                     </li>
                     <li>
                         <div class="bullet-check"><i data-lucide="check"></i></div>
-                        <span>Online & Offline classes available</span>
+                        <span>Online &amp; Offline classes available</span>
                     </li>
                 </ul>
             </div>
@@ -378,8 +378,8 @@
                         <p>Have a project in mind or want to learn a new skill? We are here to help you achieve your goals.</p>
                     </div>
                     <div class="cta-actions">
-                        <button class="btn btn-primary" onclick="openModal('projectModal')">Start a Project</button>
-                        <button class="btn btn-outline" onclick="openModal('courseModal')">Join a Course</button>
+                        <button type="button" class="btn btn-primary" onclick="openModal('projectModal')">Start a Project</button>
+                        <button type="button" class="btn btn-outline" onclick="openModal('courseModal')">Join a Course</button>
                     </div>
                 </div>
             </div>
@@ -439,7 +439,7 @@
                 <a href="#">Home</a>
                 <a href="#services">Services</a>
                 <a href="#courses">Courses</a>
-                <a href="#" onclick="openModal('contactModal')">Contact Us</a>
+                <a href="#" onclick="event.preventDefault(); openModal('contactModal')">Contact Us</a>
                 <a href="/admin" target="_blank" class="text-orange">Admin Dashboard</a>
             </div>
             <div class="footer-contact">
@@ -459,7 +459,7 @@
     <!-- Get a Free Quote Modal -->
     <div class="modal-overlay" id="quoteModal">
         <div class="modal">
-            <button class="modal-close" onclick="closeModal('quoteModal')"><i data-lucide="x"></i></button>
+            <button type="button" class="modal-close" onclick="closeModal('quoteModal')" aria-label="Close"><i data-lucide="x"></i></button>
             <h2 class="modal-title">Get a Free Quote</h2>
             <p class="modal-subtitle">Tell us about your project requirements and we will get back to you with details.</p>
             <form id="quoteForm" onsubmit="submitForm(event, '/api/quote', 'quoteForm', 'quoteModal')">
@@ -483,7 +483,7 @@
                         <option value="Mobile App Development">Mobile App Development</option>
                         <option value="Custom Software Development">Custom Software Development</option>
                         <option value="Web App Development">Web App Development</option>
-                        <option value="Maintenance & Support">Maintenance & Support</option>
+                        <option value="Maintenance &amp; Support">Maintenance &amp; Support</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -502,7 +502,7 @@
     <!-- Start a Project Modal -->
     <div class="modal-overlay" id="projectModal">
         <div class="modal">
-            <button class="modal-close" onclick="closeModal('projectModal')"><i data-lucide="x"></i></button>
+            <button type="button" class="modal-close" onclick="closeModal('projectModal')" aria-label="Close"><i data-lucide="x"></i></button>
             <h2 class="modal-title">Start a Project</h2>
             <p class="modal-subtitle">Ready to bring your idea to life? Fill in the details below to launch.</p>
             <form id="projectForm" onsubmit="submitForm(event, '/api/project', 'projectForm', 'projectModal')">
@@ -555,7 +555,7 @@
     <!-- Join a Course Modal -->
     <div class="modal-overlay" id="courseModal">
         <div class="modal">
-            <button class="modal-close" onclick="closeModal('courseModal')"><i data-lucide="x"></i></button>
+            <button type="button" class="modal-close" onclick="closeModal('courseModal')" aria-label="Close"><i data-lucide="x"></i></button>
             <h2 class="modal-title">Join a Course</h2>
             <p class="modal-subtitle">Enroll or enquire about our advanced training programs and practical bootcamps.</p>
             <form id="courseForm" onsubmit="submitForm(event, '/api/course', 'courseForm', 'courseModal')">
@@ -579,7 +579,7 @@
                         <option value="Full Stack App Development">Full Stack App Development</option>
                         <option value="UI/UX Design">UI/UX Design</option>
                         <option value="Machine Learning">Machine Learning</option>
-                        <option value="Deep Learning & Gen AI">Deep Learning & Gen AI</option>
+                        <option value="Deep Learning &amp; Gen AI">Deep Learning &amp; Gen AI</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -603,7 +603,7 @@
     <!-- Contact Modal -->
     <div class="modal-overlay" id="contactModal">
         <div class="modal">
-            <button class="modal-close" onclick="closeModal('contactModal')"><i data-lucide="x"></i></button>
+            <button type="button" class="modal-close" onclick="closeModal('contactModal')" aria-label="Close"><i data-lucide="x"></i></button>
             <h2 class="modal-title">Contact Us</h2>
             <p class="modal-subtitle">Got questions? Send us a message and our support team will respond quickly.</p>
             <form id="contactForm" onsubmit="submitForm(event, '/api/contact', 'contactForm', 'contactModal')">

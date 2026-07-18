@@ -126,6 +126,8 @@ img, svg, video, canvas {
 .text-purple { color: var(--color-purple); }
 .text-pink { color: var(--color-pink); }
 .text-green { color: var(--color-green); }
+.text-yellow { color: var(--color-yellow); }
+.text-white { color: #ffffff; }
 
 .text-gradient-orange {
     background: linear-gradient(135deg, #f77f00 0%, #ff9f1c 100%);

@@ -9,21 +9,32 @@ document.addEventListener("DOMContentLoaded", () => {
 // Mobile Menu Toggle
 function toggleMobileMenu() {
     const mobileNav = document.getElementById("mobileNav");
-    const menuBtnIcon = document.getElementById("menu-btn-icon");
+    const menuBtn = document.querySelector(".mobile-menu-btn");
+    let menuBtnIcon = document.getElementById("menu-btn-icon");
     
+    if (!mobileNav) return;
+
     mobileNav.classList.toggle("open");
     
     if (mobileNav.classList.contains("open")) {
-        menuBtnIcon.setAttribute("data-lucide", "x");
+        if (menuBtnIcon) menuBtnIcon.setAttribute("data-lucide", "x");
         document.body.style.overflow = "hidden";
     } else {
-        menuBtnIcon.setAttribute("data-lucide", "menu");
+        if (menuBtnIcon) menuBtnIcon.setAttribute("data-lucide", "menu");
         // Keep scroll locked if a modal is still open
         if (!document.querySelector(".modal-overlay.open")) {
             document.body.style.overflow = "";
         }
     }
-    lucide.createIcons();
+
+    if (typeof lucide !== "undefined") {
+        lucide.createIcons();
+        // Lucide may replace the node; keep a stable id for the next toggle
+        if (menuBtn) {
+            const icon = menuBtn.querySelector("[data-lucide], svg");
+            if (icon && !icon.id) icon.id = "menu-btn-icon";
+        }
+    }
 }
 
 // Modal State Management
