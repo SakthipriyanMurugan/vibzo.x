@@ -15,8 +15,13 @@ function toggleMobileMenu() {
     
     if (mobileNav.classList.contains("open")) {
         menuBtnIcon.setAttribute("data-lucide", "x");
+        document.body.style.overflow = "hidden";
     } else {
         menuBtnIcon.setAttribute("data-lucide", "menu");
+        // Keep scroll locked if a modal is still open
+        if (!document.querySelector(".modal-overlay.open")) {
+            document.body.style.overflow = "";
+        }
     }
     lucide.createIcons();
 }
