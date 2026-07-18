@@ -568,6 +568,11 @@ button {
     height: 22px;
 }
 
+.card-body {
+    flex: 1;
+    min-width: 0;
+}
+
 .card-title {
     font-family: var(--font-display);
     font-size: 1.15rem;
@@ -1179,6 +1184,10 @@ button {
     .hero-description {
         font-size: 1rem;
         margin-bottom: 2rem;
+        padding: 0 0.25rem;
+        color: #c5cae3;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+        max-width: 100%;
     }
     .hero-buttons {
         flex-direction: column;
@@ -1225,13 +1234,78 @@ button {
         gap: 3.5rem;
     }
 
+    /* Keep section titles aligned with the centered hero on mobile */
+    .section-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .section-tag {
+        letter-spacing: 1.5px;
+    }
+
     .section-title {
         font-size: 1.85rem;
+    }
+
+    .cards-list {
+        gap: 1rem;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        gap: 1rem;
+        padding: 1.15rem 1.1rem;
+        align-items: center;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+
+    .card-icon-wrapper {
+        width: 44px;
+        height: 44px;
+    }
+
+    .card-body {
+        flex: 1;
+        min-width: 0;
+        text-align: left;
+    }
+
+    .card-title {
+        font-size: 1.05rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .card-text {
+        font-size: 0.85rem;
+        line-height: 1.45;
+    }
+
+    .sub-benefits-grid {
+        gap: 1.15rem;
+        padding-top: 1.5rem;
+        text-align: left;
+    }
+
+    .why-content {
+        text-align: center;
     }
 
     .why-title {
         font-size: 1.85rem;
         margin-bottom: 1.75rem;
+        text-align: center;
+    }
+
+    .why-bullets {
+        text-align: left;
+        max-width: 520px;
+        margin: 0 auto;
     }
 
     .why-bullets li {
@@ -1242,6 +1316,11 @@ button {
 
     .bullet-check {
         margin-top: 2px;
+    }
+
+    .tech-stack-section {
+        padding: 3.5rem 0;
+        text-align: center;
     }
 
     .stats-grid {
