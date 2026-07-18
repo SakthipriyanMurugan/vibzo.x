@@ -260,14 +260,26 @@ function initScrollAnimation() {
     });
 }
 
-// Interactive 3D Parallax effect for Hero background
+// Interactive 3D Parallax effect for Hero background (desktop only)
 function init3DParallaxBackground() {
     const heroSection = document.getElementById("heroSection");
     const heroBg = document.getElementById("heroBg");
     
     if (!heroSection || !heroBg) return;
+
+    // Skip parallax on touch / narrow screens to keep mobile layout stable
+    const canParallax = () =>
+        window.matchMedia("(hover: hover) and (pointer: fine)").matches &&
+        window.innerWidth > 768;
+
+    if (!canParallax()) return;
     
     heroSection.addEventListener("mousemove", (e) => {
+        if (!canParallax()) {
+            heroBg.style.transform = "";
+            return;
+        }
+
         const width = heroSection.offsetWidth;
         const height = heroSection.offsetHeight;
         
@@ -297,6 +309,7 @@ function init3DParallaxBackground() {
 
     // Re-enable smooth transition only on mouseenter to avoid lag during move
     heroSection.addEventListener("mouseenter", () => {
+        if (!canParallax()) return;
         heroBg.style.transition = "transform 0.1s ease-out";
     });
 }
